@@ -1,21 +1,43 @@
 <html>
-<head>
-<META HTTP-EQUIV="content-type" CONTENT="text/html; CHARSET=UTF-8">
-</head>
-<body>
+ <head>
+ <title> Gałkowski 3F</title>
 
-linki do zadań: </br>
-    
-<a href="z1_galk.html" target="strony">Zadanie 1</a>
-<br>
-<a href="zad2_galk.html" target="strony">Zadanie 2</a>
-<br>
-<a href="zad3_galk.html" target="strony">Zadanie 3</a>
-<br>
-<a href="zad4_galk.html" target="strony">Zadanie 4</a>
-<br>
-<a href="zad5_galk.html" target="strony">Zadanie 5</a>
-<br>
-  
-      </body>
+ <script language="JavaScript">
+function WinOpen_zad1() 
+ {
+window.open("z1_galk.html","okno_zad1","toolbar=no,directories=no,menubar=no,height=380,width=160,top=200,left=200");
+ }
+function WinOpen_zad2() 
+ {
+window.open("zad2_galk.html","okno_zad2","toolbar=no,directories=no,menubar=no,height=380,width=160,top=200,left=200");
+ }
+ function WinOpen_zad3() 
+ {
+window.open("zad3_galk.html","okno_zad3","toolbar=no,directories=no,menubar=no,height=380,width=160,top=200,left=200");
+ }
+function WinOpen_zad4() 
+ {
+window.open("zad4_galk.html","okno_zad4","toolbar=no,directories=no,menubar=no,height=380,width=160,top=200,left=400");
+ }
+ function WinOpen_zad5() 
+ {
+window.open("zad5_galk.html","okno_zad5","toolbar=no,directories=no,menubar=no,height=380,width=160,top=200,left=400");
+ }
+
+function okno_zamknij() 
+ {
+ window.close()
+ }
+ </script>
+ </head>
+<body>
+ <form>
+<input type="button_z1" name="zadanie1" value="zad1_galk" onclick="WinOpen_zad1(' ')">
+<input type="button_z2" name="zadanie2" value="zad2_galk" onclick="WinOpen_zad2(' ')">
+<input type="button_z3" name="zadanie3" value="zad3_galk" onclick="WinOpen_zad3(' ')">
+<input type="button_z4" name="zadanie4" value="zad4_galk" onclick="WinOpen_zad4(' ')">
+<input type="button_z5" name="zadanie5" value="zad5_galk" onclick="WinOpen_zad5(' ')">
+ <input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
+ </form>
+</body>
 </html>
