@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+ <head>
+ <title> </title>
+ <meta charset="utf-8">
+ </head>
+<body>
+<div style="color:blue;font-size:100px;">
+ <script language="JavaScript">
+let A=prompt("A=","");
+let A_gal=parseFloat(A);
+let B=prompt("B=","");
+let B_gal=parseFloat(B);
+
+let C_gal=A_gal*A_gal*A_gal;
+let D_gal=3*A_gal*A_gal*B_gal;
+let E_gal=3*A_gal*B_gal*B_gal;
+let F_gal=B_gal*B_gal*B_gal;
+let O_gal=C_gal+D_gal+E_gal+F_gal;
+
+document.write("A="+A_gal+" "+"B="+B_gal+"<br>");
+document.write("("+A_gal+"+");
+document.write(B_gal+")^3=");
+document.write(A_gal+"^3 + 3*(("+A_gal+")^"+B_gal+")*("+B_gal+") + 3*("+A_gal+")*(("+B_gal+")^"+B_gal+")");
+document.write(B_gal+"^3 = "+C_gal+"+"+D_gal+"+"+E_gal+"+"+F_gal+"="+O_gal+"<br>");
+ </script>
+</div>
+</body>
+</html>
