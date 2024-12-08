@@ -1,0 +1,28 @@
+<textarea>
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+    <div id="strona" style="color:red;font-size:62px;">
+        <script language="JavaScript">
+            let D1_gal = prompt("Pierwsza data (D1_gal):", "");
+            let G1_gal = prompt("Pierwsza godzina (G1_gal):", "");
+            let D2_gal = prompt("Druga data (D2_gal):", "");
+            let G2_gal = prompt("Druga godzina (G2_gal):", "");
+
+            let D1 = parseInt(D1_gal);
+            let G1 = parseInt(G1_gal);
+            let D2 = parseInt(D2_gal);
+            let G2 = parseInt(G2_gal);
+
+            let iloscSekund = ((D1 - D2) * 24 * 60 * 60) + ((G1 - G2) * 60 * 60);
+            document.getElementById("strona").innerHTML = "Ilość sekund: " + iloscSekund + " sekund";
+        </script>
+    </div>
+</body>
+
+</html>
+</textarea>
