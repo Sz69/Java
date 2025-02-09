@@ -1,0 +1,46 @@
+<html>
+<head>
+    <script type="text/javascript">
+        function okno_zamknij_gal() {
+            window.close()
+        }
+        5
+    </script>
+</head>
+<body>
+<form>
+<textarea name="Galkowski" cols="120" rows="30" readonly>
+<html>
+<head>
+ <meta charset="UTF-8">
+ <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+<script type="text/javascript">
+ function pole_galkowski()
+ {
+var a_galkowski= parseFloat(document.getElementById('dlugosc').value);
+var b_galkowski= a_galkowski*a_galkowski;
+ document.getElementById("nazwa").innerHTML ="Pole kwadratu= "+b_galkowski.toFixed(2)+" cm^2"; 
+ }
+ function obwod_galkowski()
+ {
+var a_galkowski= parseFloat(document.getElementById('dlugosc').value);
+var b_galkowski= 4*a_galkowski;
+ document.getElementById("nazwa").innerHTML ="Obwód kwadratu= "+b_galkowski.toFixed(2)+" cm"; 
+ }
+</script>
+ <h1>Wszystko o KWADRACIE</h1><br><br>
+ Podaj długość boku: <input type="text" id="dlugosc" value="podaj długość"> cm<br><br><br>
+ <input type="button" name="pole" value="Oblicz pole" Onclick="pole_galkowski()"><br><br>
+ <input type="button" name="obwod" value="Oblicz obwod" Onclick="obwod_galkowski()"><br><br>
+ <div style="color:red;font-size:50px;"id="nazwa"></div>
+</body>
+</html>
+</textarea>
+    </form>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_galkowski()" />
+    <script type="text/javascript">
+    </script>
+</body>
+</html>
