@@ -1,0 +1,45 @@
+<!DOCTYPE html> 
+ <head> 
+ <title> Użycie fukcji </title> 
+ <meta charset="utf-8"> 
+ </head> 
+<body>
+ <div style="color:navy;font-size:50px;">
+ <script language="JavaScript">
+ 
+ let a=parseFloat(prompt("a=",""));
+ let b=parseFloat(prompt("b=",""));
+ 
+ 
+ function mnozenie_gal(a, b) 
+ {
+ return a * b;
+ }
+ function odejmowanie_gal(a, b) 
+ {
+ return a - b;
+ }
+ function do_kwadratu_gal(a, b) 
+ {
+ return a*a;
+ return b*b;
+ } 
+ function reszta_z_dzielenia_a_przez_b_gal(a, b) 
+ {
+ return a % b;
+ }
+ function suma_gal(a, b) 
+ {
+ return a + b;
+ }
+ document.write("podane liczby: a="+a+"  "+"b="+b+"<br>");
+ document.write("suma="+suma_gal(a,b)+"<br>");
+ document.write("mnożenie="+mnozenie_gal(a,b)+"<br>");
+ document.write("odejmowanie="+odejmowanie_gal(a,b)+"<br>");
+ document.write("do kwadratu="+do_kwadratu_gal(a)+"<br>");
+ document.write("do kwadratu="+do_kwadratu_gal(b)+"<br>");
+ document.write("reszta z dzielenia a przez b = "+reszta_z_dzielenia_a_przez_b_gal(a,b)+"<br>");
+</script>
+</div>
+</body>
+</html>
