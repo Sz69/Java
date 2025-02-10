@@ -1,64 +1,61 @@
-<html> 
-<head> 
- <script language="JavaScript">
- var xa_gal=
-function AB_gal(xa,ya,xb,yb)
-{
-xa_gal=parseFloat(xa)
- ya_gal=parseFloat(ya)
-xb_gal=parseFloat(xb)
- yb_gal=parseFloat(yb)
+<!DOCTYPE html>
+<html>
+<head>
+    <script language="JavaScript">
+        function AB_gal() {
+            const xa = parseFloat(document.getElementById("xa").value);
+            const ya = parseFloat(document.getElementById("ya").value);
+            const xb = parseFloat(document.getElementById("xb").value);
+            const yb = parseFloat(document.getElementById("yb").value);
 
-}
-function BC_gal(xb,yb,xc,yc)
-{
-xb_gal=parseFloat(xb)
- yb_gal=parseFloat(yb)
- xc_gal=PerseFloat(xc)
-yc_gal=PerseFloat(yc)
-}
-function AC_gal(xa,ya,xc,yc)
-{
-xa_gal=parseFloat(xa)
- ya_gal=parseFloat(ya)
- xc_gal=PerseFloat(xc)
-yc_gal=PerseFloat(yc)
 
-}
+            const AB = Math.sqrt(Math.pow(xb - xa, 2) + Math.pow(yb - ya, 2));
+			
+            document.getElementById("nazwa").innerHTML = `Długość boku AB = ${AB.toFixed(2)}`;
+        }
 
- </script>
-</head> 
-<body> 
-tworzenie trójkąta
-<br> <br>
-<form name="formularz" action="..."; onsubmit="AB_gal(this.jeden.value,this.dwa.value,this.trzy.value,this.cztery.value); 
-BC_gal(this.trzy.value,this.cztery.value,this.pięć.value,this.sześć.value);
-AC_gal(this.jeden.value,this.dwa.value,this.pięć.value,this.sześć.value);return false"> 
- Bok |AB|<br><br>
- Podaj xa=
- <input size="6" name="jeden">
- Podaj ya=
- <input size="6" name="dwa">
- <br><br>
-Bok |BC|<br> <br>
- Podaj xb=
- <input size="6" name="trzy">
- Podaj yb=
- <input size="6" name="cztery">
- <br><br>
-Bok |AC|<br> <br>
- Podaj xc=
- <input size="6" name="pięć">
- Podaj yc=
- <input size="6" name="sześć">
- <br> <br>
- <input TYPE="submit" Value="oblicz" >
- <br> <br>
- 
-</form>
-<table>
- <tr id="pokaz1"></tr>
- <tr id="pokaz2"></tr>
-</table>
-</body> 
+        function BC_gal() {
+            const xb = parseFloat(document.getElementById("xb").value);
+            const yb = parseFloat(document.getElementById("yb").value);
+            const xc = parseFloat(document.getElementById("xc").value);
+            const yc = parseFloat(document.getElementById("yc").value);
+
+           
+            const BC = Math.sqrt(Math.pow(xc - xb, 2) + Math.pow(yc - yb, 2));
+            document.getElementById("nazwa").innerHTML = `Długość boku BC = ${BC.toFixed(2)}`;
+        }
+
+        function AC_gal() {
+            const xa = parseFloat(document.getElementById("xa").value);
+            const ya = parseFloat(document.getElementById("ya").value);
+            const xc = parseFloat(document.getElementById("xc").value);
+            const yc = parseFloat(document.getElementById("yc").value);
+
+          
+            const AC = Math.sqrt(Math.pow(xc - xa, 2) + Math.pow(yc - ya, 2));
+            document.getElementById("nazwa").innerHTML = `Długość boku AC = ${AC.toFixed(2)}`;
+        }
+    </script>
+</head>
+<body>
+    <h1>Oblicz długości boków trójkąta</h1>
+    
+    <h2>A</h2>
+    Podaj xa = <input type="text" id="xa"><br>
+    Podaj ya = <input type="text" id="ya"><br><br>
+
+    <h2>B</h2>
+    Podaj xb = <input type="text" id="xb"><br>
+    Podaj yb = <input type="text" id="yb"><br><br>
+
+    <h2>C</h2>
+    Podaj xc = <input type="text" id="xc"><br>
+    Podaj yc = <input type="text" id="yc"><br><br>
+
+    <input type="button" value="Oblicz |AB|" onclick="AB_gal()"><br>
+    <input type="button" value="Oblicz |BC|" onclick="BC_gal()"><br>
+    <input type="button" value="Oblicz |AC|" onclick="AC_gal()"><br><br>
+    
+    <div style="font-size:50pxt;"id="nazwa"></div>
+</body>
 </html>
