@@ -1,0 +1,32 @@
+<html>
+ <head>
+ <script type="text/javascript">
+var wazon = {
+jaki_wazon: 'walcowaty ',
+kolor: 'Przezroczysty',
+typ: 'wazon na kwiaty',
+wazon_wyswietl_Galkowski: function ()
+{
+ document.write(this.jaki_wazon + ' ' + this.kolor + ' ' + this.typ)
+ }
+}
+wazon.wazon_wyswietl_Galkowski();
+wazon.srodek_wazonu="Wazon zawiera wode wraz z lodyga kwiatka";
+wazon.wazon_pokaz_Galkowski=function() {alert('srodek_wazonu: ' + this.srodek_wazonu + ' ')}
+wazon.wazon_pokaz_Galkowski();
+ </script>
+ </head>
+<body>
+<br>
+ Programowanie obiektowe. <br>
+ Obiekt to wazon<br>
+ Pola:<br>
+ jaki wazon<br>
+ kolor<br>
+ typ<br>
+ metoda: <br>
+ wazon_wyswietl_Galkowski<br>
+ nowe pole to srodek wazonu <br>
+ nowa metoda to wazon_pokaz_Galkowski();<br>
+</body>
+</html>
