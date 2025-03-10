@@ -1,0 +1,45 @@
+<html>
+<head>
+    <script type="text/javascript">
+        function okno_zamknij_galkowski() {
+            window.close()
+        }
+        5
+    </script>
+</head>
+<body>
+<form>
+<textarea name="Galkowski" cols="120" rows="30" readonly>
+<html>
+ <head>
+ <script type="text/javascript">
+ var wazon = {
+jaki_wazon: 'walcowaty',
+kolor: 'Przezroczysty',
+typ: 'wazon na kwiaty',
+wazon_wyswietl_Galkowski: function ()
+{
+ document.write(this.jaki_wazon + ' ' + this.kolor + ' ' + this.typ)
+ }
+}
+wazon.wazon_wyswietl_Galkowski();
+ </script>
+ </head>
+<body>
+<br>
+ Programowanie obiektowe. <br>
+ Obiekt to wazon<br>
+ Pola:<br>
+ jaki wazon<br>
+ kolor<br>
+ typ<br>
+ metoda: wazon_wyswietl_Galkowski<br>
+</body>
+</html>
+</textarea>
+    </form>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_galkowski()" />
+    <script type="text/javascript">
+    </script>
+</body>
+</html>
