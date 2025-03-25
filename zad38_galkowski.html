@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background-color: silver; 
+}
+p {
+  color: green;
+  font-size: 41px;
+}
+#menu {
+  color: red;
+  font-size: 41px;
+}
+
+</style>
+</head>
+<body>
+
+<p id="nazwisko">Moje nazwisko to: Szymon Gałkowski</p>
+<p id="oblicz"></p>
+<a id="menu"></a>
+<br><br>
+<input type="button" name="wybór opcji" value="wybór opcji" onclick="opcja_gal('')">
+<br><br>
+<a id="opcje"> </a>
+<script>
+  const imie_gal = "Szymon";
+  const nazwisko_gal = "Gałkowski";
+  
+  const dur_gal = 29 + 50;
+  const liczba1_gal = imie_gal.length;
+  const liczba2_gal = liczba1_gal + 7;
+  const liczba3_gal = nazwisko_gal.length;
+  const liczba4_gal = liczba3_gal + 4;
+  const lln_gal = liczba3_gal + 20;
+
+  document.getElementById("oblicz").innerHTML = 
+    "liczba1 = " + liczba1_gal + "<br>" +
+    "liczba2 = " + liczba1_gal + " + 7 = " + liczba2_gal + "<br>" +
+    "liczba3 = " + liczba3_gal + "<br>" +
+    "liczba4 = " + liczba3_gal + " + 4 = " + liczba4_gal + "<br>";
+	
+  document.getElementById("menu").innerHTML = 
+	"------------MENU------------" + "<br>" +
+	liczba1_gal + "-wyświetlanie teorii o operatorach logicznych" + "<br>" +
+	lln_gal + "- sprawdzanie czy liczba należy do przedziału (od " + liczba1_gal + "; do" + liczba2_gal + "]" + "<br>" +
+	dur_gal + "- czy liczba należy do przedziału (-oo ; " + liczba1_gal + ")  lub [" + liczba2_gal + " ; +oo))";
+	
+	 function opcja_gal() {
+            let opcja = prompt("podaj opcję= ","");	
+			
+    if(opcja == 9) {
+        document.getElementById("opcje").innerHTML = 
+        "<p style='color:green; font-size: 7px;'>Jesteś w opcji 9 --> teoria</p>" + 
+        "<p style='color:blue; font-size: 5px;'>&& i x=3 y=4 (x<0 && y>2) wynik → prawda</p>" + 
+        "<p style='color:blue; font-size: 5px;'>|| lub x=3 y=4 (x==8 || y==6) wynik → fałsz</p>" + 
+        "<p style='color:blue; font-size: 5px;'>! zaprzeczenie x=3 y=4 !(x==y) wynik → prawda</p>";
+    } 
+    else if (opcja == 25) {
+        let przedzial = parseFloat(prompt("Podaj liczbę: ", ""));
+        let wyp_gal = "<p style='color:green; font-size: 7px;'>Jesteś w opcji 25 --> Przedział";
+        wyp_gal += (przedzial >= 9 && przedzial <= 16) ? "<br>Liczba należy do przedziału" : "<br>Liczba nie należy do przedziału";
+        wyp_gal += "</p>";
+        document.getElementById("opcje").innerHTML = wyp_gal;
+    } 
+    else if (opcja == 79) {
+        let przedzial2 = parseFloat(prompt("Podaj liczbę: ", ""));
+        let wyp2_gal = "<p style='color:green; font-size: 7px;'>Jesteś w opcji 79 --> Przedział";
+        wyp2_gal += (przedzial2 < 9 || przedzial2 >= 16) ? "<br>Liczba należy do przedziału" : "<br>Liczba nie należy do przedziału";
+        wyp2_gal += "</p>";
+        document.getElementById("opcje").innerHTML = wyp2_gal;
+    } 
+    else {
+        document.getElementById("opcje").innerHTML = "<p style='color:red; font-size: 7px;'>Nie ma takiej opcji</p>";
+    }
+}
+</script>
+
+</body>
+</html>
