@@ -1,0 +1,36 @@
+<html>
+<head>
+    <script type="text/javascript">
+        function okno_zamknij_galkowski() {
+            window.close()
+        }
+        5
+    </script>
+</head>
+<body>
+<form>
+<textarea name="Galkowski" cols="120" rows="30" readonly>
+<html> 
+ <body> 
+ <div style="color:red;font-size:50px;"> 
+    <script language="JavaScript"> 
+  var x=prompt("podaj liczbę x=",""); 
+               var a_gal=parseFloat(x); 
+    document.write("czytana liczba x="+a_gal+"<br>");     
+               if(a_gal>0) 
+                      {document.write("czytana liczba jest większa od 0"+"<br>");} 
+				else if(a_gal<0)
+					{document.write("czytana liczba jest mniejsza od 0"+"<br>");}
+				else
+				{document.write("czytana liczba jest równa od 0"+"<br>");}
+                  </script> 
+ </div> 
+ </body> 
+</html>
+</textarea>
+    </form>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_galkowski()" />
+    <script type="text/javascript">
+    </script>
+</body>
+</html>
